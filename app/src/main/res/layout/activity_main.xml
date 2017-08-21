@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:background="@color/colorPrimary"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-6dp"
+        android:id="@+id/relativeLayout4">
+
+        <EditText
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Enter New Task"
+            android:inputType="textPersonName"
+            android:shadowColor="@color/colorAccent"
+            android:singleLine="false"
+            android:textColor="@color/colorAccent"
+            android:textColorHighlight="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:textColorLink="@color/colorAccent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp" />
+
+        <Button
+            android:id="@+id/save"
+            android:onClick="buttonClicked"
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_below="@+id/txt1"
+            android:layout_alignLeft="@+id/txt1"
+            android:layout_alignStart="@+id/txt1" />
+
+        <TextView
+            android:visibility="invisible"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="23dp"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToDo"
+            android:layout_alignTop="@+id/txt1"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:id="@+id/remove"
+        android:onClick="buttonClicked"
+        android:text="Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="238dp"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/list1"
+        android:layout_alignRight="@+id/list1"
+        android:layout_alignEnd="@+id/list1" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948"
+        tools:layout_editor_absoluteY="145dp"
+        android:id="@+id/list1"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:visibility="invisible"
+        android:textSize="17dp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_above="@+id/remove"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
